@@ -23,7 +23,7 @@ class TestBahttext(unittest.TestCase):
         test_cases: List[object] = []
 
         # load test cases from json file
-        with open('testcases.json') as d:
+        with open('tests/testcases.json') as d:
             test_cases = json.load(d)
 
         for test_case in test_cases:

@@ -1,9 +1,9 @@
 # pybaht
 
-[![CI and CD](https://github.com/jojoee/pybaht/actions/workflows/continuous-integration.yml/badge.svg?branch=master)](https://github.com/jojoee/pybaht/actions/workflows/continuous-integration.yml)
+[![CI and CD](https://github.com/jojoee/pybaht/actions/workflows/continuous-integration.yml/badge.svg?branch=main)](https://github.com/jojoee/pybaht/actions/workflows/continuous-integration.yml)
 [![PyPI version fury.io](https://badge.fury.io/py/pybaht.svg)](https://pypi.python.org/pypi/pybaht/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![codecov](https://codecov.io/gh/jojoee/pybaht/branch/master/graph/badge.svg)](https://codecov.io/gh/jojoee/pybaht)
+[![codecov](https://codecov.io/gh/jojoee/pybaht/branch/main/graph/badge.svg)](https://codecov.io/gh/jojoee/pybaht)
 
 Baht library for Python
 

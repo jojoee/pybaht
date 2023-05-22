@@ -1,0 +1,31 @@
+name: release
+
+on:
+  workflow_run:
+    workflows: [ "continuous-integration" ]
+    branches: [ main ]
+    types:
+      - completed
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    # https://stackoverflow.com/questions/67516571/github-action-triggered-by-success-of-a-different-action
+    # https://github.com/orgs/community/discussions/26238
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    strategy:
+      matrix:
+        python-version: [ 3.11 ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # Semantic Release
+      - name: Python Semantic Release
+        uses: relekang/python-semantic-release@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pypi_token: ${{ secrets.PYPI_TOKEN }}
